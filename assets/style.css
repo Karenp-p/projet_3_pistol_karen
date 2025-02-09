@@ -1,0 +1,501 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+
+
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+
+
+
+
+nav ul li a {
+    text-decoration: none; 
+    color: black; 
+	
+}
+
+
+
+nav ul li:hover {
+    color: #000; 
+    transition: color 0.3s ease;
+	font-weight:bolder;
+}
+
+nav ul li a:hover {
+    color: #000; 
+    transition: color 0.3s ease;
+	font-weight:bold;
+}
+
+nav ul li.insta img {
+    width: 24px; 
+    height: auto; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sous-titre {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*Filtre*/
+
+/* Conteneur des filtres */
+#filters-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+    margin-top: 2rem;
+	margin-bottom: 3rem;
+
+}
+
+/* Style de base des boutons */
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #264a3e; 
+    border-radius: 25px; 
+    background-color: transparent;
+    color: #264a3e; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.filter-btn.active {
+    background-color: #264a3e; 
+    color: #ffffff; 
+}
+
+/* Effet hover */
+.filter-btn:hover {
+    background-color: #264a3e; 
+    color: #ffffff; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#update{
+	display: none;
+}
+
+#modal{
+	display: none;
+	/* height: 600px; */
+	width: 500px;
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	background-color: #ffffff;
+	z-index: 10;
+	border-radius: 10px;
+	transition: opacity 0.3s ease-in-out;
+}
+
+#works{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
+#gallery1{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 50px;
+}
+
+.img-modal{
+	width: 50px;
+	height: 75px;
+	margin: 8px;
+}
+
+#add-work{
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
+#add-work {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+#add-work h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#img-container {
+    width: 100%;
+    background-color: #f4f8fb;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-box i {
+    font-size: 50px;
+    color: #9e9e9e;
+    margin-bottom: 10px;
+}
+
+#img-box button {
+    background-color: #d9e5f2;
+    color: #4a6572;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#img-box span {
+    font-size: 12px;
+    color: #999;
+}
+
+.add-form {
+    width: 100%;
+}
+
+.add-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-form input, 
+.add-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+#add-work .submit-button {
+    margin-top: 20px;
+    background-color: #d9d9d9;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: not-allowed; 
+    text-align: center;
+    width: 100%;
+}
+
+#add-work .submit-button.active {
+    background-color: #4a6572;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.mdp {
+	color: #000;
+	display: flex;
+	justify-content: center;
+}
+
+#close{
+	width: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#back-arrow{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 20px;
+}
+
+
+/* banderole MODE EDITION */
+.header {
+    background-color: #000; 
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-size: 16px; 
+    font-weight: 500; /* Légèrement gras */
+}
+
+.header-content i {
+    font-size: 20px; 
+}
