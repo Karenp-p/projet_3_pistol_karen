@@ -27,3 +27,5 @@ document.getElementById('login').addEventListener('click', (e) => {
     const password = document.getElementById('password').value;
     login(email, password);
 })
+
+// petite modif
