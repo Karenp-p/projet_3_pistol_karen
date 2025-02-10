@@ -28,4 +28,3 @@ document.getElementById('login').addEventListener('click', (e) => {
     login(email, password);
 })
 
-// petite modif

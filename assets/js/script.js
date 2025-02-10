@@ -18,6 +18,7 @@ checkTocken();
 loginLogout();
 
 async function recupdata() {
+    
     try{
         const response = await fetch("http://localhost:5678/api/works", {
             method: "GET",
@@ -157,18 +158,22 @@ function loginLogout(){
 
 
 UPDATE.addEventListener('click', () => {
-    // console.log (workData)
+     console.log("update click")
+     console.log(workData)
     MODAL.style.display = 'flex';
-    workData.forEach(element => {
-        createFigureModal(GALERIE1, element);
+    workData.forEach((element,index) => {
+        console.log(element,index)
+       createFigureModal(GALERIE1, element);
     });
 })
 
 function createFigureModal(parent, work){
     let figure = document.createElement('figure');
     let img = document.createElement('img');
-    img.classList.add('img-modal');
     let i = document.createElement('i');
+    
+    img.classList.add('img-modal');
+
     i.classList.add('fa-solid');
     i.classList.add('fa-trash-can');
 
@@ -340,7 +345,7 @@ document.getElementById ("header").style.display = "flex";
 // Suppression des élements
 // Fonction pour supprimer une image
 async function deleteImage(workId, figureElement) {
-    let token = localStorage.getItem('token'); // Récupération du token
+    let token = localStorage.getItem('token'); 
 
     if (!token) {
         console.error("Vous devez être connecté pour supprimer une image.");

@@ -313,6 +313,10 @@ nav ul li.insta img {
 	border-radius: 10px;
 	transition: opacity 0.3s ease-in-out;
 }
+.galeriePhoto {
+	font-size: 20px;
+	margin-top: 40px;
+}
 
 #works{
 	display: flex;
@@ -326,6 +330,23 @@ nav ul li.insta img {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 50px;
+}
+figure {
+    position: relative;
+    display: inline-block;
+}
+
+
+figure i.fa-trash-can {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 8px;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .img-modal{
