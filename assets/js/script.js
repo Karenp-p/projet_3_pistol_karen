@@ -371,6 +371,8 @@ async function deleteImage(workId, figureElement) {
 
         // Mise à jour de workData en filtrant l'image supprimée
         workData = workData.filter(work => work.id !== workId);
+        location.reload();
+    
 
     } catch (error) {
         console.error("Erreur :", error);
